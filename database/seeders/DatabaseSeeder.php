@@ -17,18 +17,19 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        //\App\Models\User::factory(10)->create();
+        //sudah di ubah ke indonesia
         //seeding manual
-        User::create([
-            'name' => 'Dzaky Faishalariq',
-            'email' => 'dzakyfaishalariq@gmail.com',
-            'password' => bcrypt('12345678')
-        ]);
-        User::create([
-            'name' => 'Fahri haikal',
-            'email' => 'fahri@gmail.com',
-            'password' => bcrypt('12345678')
-        ]);
+        // User::create([
+        //     'name' => 'Dzaky Faishalariq',
+        //     'email' => 'dzakyfaishalariq@gmail.com',
+        //     'password' => bcrypt('12345678')
+        // ]);
+        // User::create([
+        //     'name' => 'Fahri haikal',
+        //     'email' => 'fahri@gmail.com',
+        //     'password' => bcrypt('12345678')
+        // ]);
+        User::factory(3)->create();
         Category::create([
             'name' => 'Teknologi',
             'slug' => 'teknologi'
@@ -37,37 +38,43 @@ class DatabaseSeeder extends Seeder
             'name' => 'Isu',
             'slug' => 'isu'
         ]);
-        Post::create([
-            'title' => 'Judul Pertama saya',
-            'slug' => 'judul-pertama-saya',
-            'excerpt' => 'Ini adalah excerpt dari judul pertama saya',
-            'body' => 'Ini adalah body dari judul pertama saya lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaerat!',
-            'category_id' => 1,
-            'user_id' => 1
+        Category::create([
+            'name' => 'Olahraga',
+            'slug' => 'olahraga'
         ]);
-        Post::create([
-            'title' => 'Judul Kedua saya',
-            'slug' => 'judul-kedua-saya',
-            'excerpt' => 'Ini adalah excerpt dari judul pertama saya',
-            'body' => 'Ini adalah body dari judul pertama saya lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaerat!',
-            'category_id' => 1,
-            'user_id' => 1
-        ]);
-        Post::create([
-            'title' => 'Judul Ketiga saya',
-            'slug' => 'judul-ketiga-saya',
-            'excerpt' => 'Ini adalah excerpt dari judul pertama saya',
-            'body' => 'Ini adalah body dari judul pertama saya lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaerat!',
-            'category_id' => 2,
-            'user_id' => 1
-        ]);
-        Post::create([
-            'title' => 'Judul Keempat saya',
-            'slug' => 'judul-keempat-saya',
-            'excerpt' => 'Ini adalah excerpt dari judul pertama saya',
-            'body' => 'Ini adalah body dari judul pertama saya lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaerat!',
-            'category_id' => 2,
-            'user_id' => 2
-        ]);
+        //panggil factory 
+        Post::factory(20)->create();
+        // Post::create([
+        //     'title' => 'Judul Pertama saya',
+        //     'slug' => 'judul-pertama-saya',
+        //     'excerpt' => 'Ini adalah excerpt dari judul pertama saya',
+        //     'body' => 'Ini adalah body dari judul pertama saya lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaerat!',
+        //     'category_id' => 1,
+        //     'user_id' => 1
+        // ]);
+        // Post::create([
+        //     'title' => 'Judul Kedua saya',
+        //     'slug' => 'judul-kedua-saya',
+        //     'excerpt' => 'Ini adalah excerpt dari judul pertama saya',
+        //     'body' => 'Ini adalah body dari judul pertama saya lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaerat!',
+        //     'category_id' => 1,
+        //     'user_id' => 1
+        // ]);
+        // Post::create([
+        //     'title' => 'Judul Ketiga saya',
+        //     'slug' => 'judul-ketiga-saya',
+        //     'excerpt' => 'Ini adalah excerpt dari judul pertama saya',
+        //     'body' => 'Ini adalah body dari judul pertama saya lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaerat!',
+        //     'category_id' => 2,
+        //     'user_id' => 1
+        // ]);
+        // Post::create([
+        //     'title' => 'Judul Keempat saya',
+        //     'slug' => 'judul-keempat-saya',
+        //     'excerpt' => 'Ini adalah excerpt dari judul pertama saya',
+        //     'body' => 'Ini adalah body dari judul pertama saya lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaerat!',
+        //     'category_id' => 2,
+        //     'user_id' => 2
+        // ]);
     }
 }
