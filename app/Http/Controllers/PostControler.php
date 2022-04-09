@@ -21,7 +21,7 @@ class PostControler extends Controller
             'title' => 'Blog',
             //'posts' => Post::all()
             'active' => 'posts',
-            'posts' => Post::latest()->filter(request(['cari', 'category']))->get() //menampilkan post terbaru
+            'posts' => Post::latest()->filter(request(['cari', 'category']))->paginate(7)->withQueryString() //menampilkan post terbaru
         ]);
     }
     public function show(Post $post)

@@ -47,4 +47,8 @@
     @else
         <p class = "text-center fs-4">Tidak ada post</p>
     @endif
+    <!--menambahkan next page dengan bootsterp-->
+    <div class = " d-flex justify-content-end">
+        {{ $posts->links() }} 
+    </div>
 @endsection
